@@ -5,6 +5,9 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  The game take any integer or character for user input to guess a number. After submit the guess, the hint message is not helpful.
+  The secret number is already display, so user do not need to take any guess. When press "New Game", the score still remain the
+  same.
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
   1. Guess number are not checked/ can be out of range
@@ -46,14 +49,26 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+  Because New Game is pressed, so need to change another guessing target
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+  "reruns" is like refreshing a page, restart a page
+  session state is a temporary memory that even after reruns, it does not change, remain the same
 - What change did you make that finally gave the game a stable secret number?
-
+  The number was stable for secret number, unless the "New Game" button is clicked
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  Manual test the app first
+  When reading the code, any unclear block, ask AI to explain the logic, and see if the logic is it correct
+  Mark "FIXME" on the code that looks buggy
 - What is one thing you would do differently next time you work with AI on a coding task?
+  I will ask for the suggestion on how to solve and issue
+  ask AI to explain the cause of the error, and try to understand the reason rather than just let AI to solve it without the 
+  understanding.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  I think when integrating all blocks of code, the blocks does not connect, so it cause all the buggs. Some of the function do 
+  not needed, such as the even/odd feature that change the number to a str. And Logical issue such as the hint message after each guess.
+  The suggestion of "Go HIGHER" and "Go LOWER" flip around.
